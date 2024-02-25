@@ -498,8 +498,30 @@ nav ul li a:hover {
 
 - `color: #ff5733;`: Cambia el color del texto de los enlaces al pasar el ratón sobre ellos a un tono de naranja (#ff5733). Esto proporciona un efecto de resaltado cuando el ratón está sobre un enlace del menú.
 
+### Quinto Archivo `ejercicio5.js`
+```
+function highlight(element) {
+    element.style.fontWeight = 'bold'; // Cambia el estilo al pasar el ratón sobre el enlace
+}
+
+function unhighlight(element) {
+    element.style.fontWeight = 'normal'; // Restaura el estilo al quitar el ratón del enlace
+}
+```
+- `function highlight(element) { ... }`: Esta función se llama cuando el ratón pasa sobre un enlace del menú. Toma un parámetro element, que representa el enlace que está siendo resaltado.
+
+- `element.style.fontWeight = 'bold';`: Cambia el estilo del texto del enlace a negrita cuando el ratón pasa sobre él. Esto hace que el texto del enlace se vea más destacado y fácil de distinguir del resto del contenido.
+
+- `function unhighlight(element) { ... }`: Esta función se llama cuando el ratón sale de un enlace del menú. También toma un parámetro element, que representa el enlace del que se está quitando el resaltado.
+
+- `element.style.fontWeight = 'normal';`: Restaura el estilo del texto del enlace a la normalidad cuando el ratón sale de él. Esto revierte el cambio de estilo realizado por la función highlight, devolviendo el texto del enlace a su grosor normal.
+
+# CONCLUSION
+* HTML: Define la estructura del menú de navegación utilizando listas no ordenadas (<ul>) y listas de elementos (<li>). Cada elemento de la lista contiene un enlace (<a>) que representa una opción de menú.
+
+* CSS: Establece los estilos visuales del menú de navegación y sus elementos. Se definen estilos para la disposición de los elementos, el color y el comportamiento de los enlaces, así como para la apariencia de las miniaturas en la galería de imágenes.
+
+* JavaScript: Proporciona interactividad al menú de navegación y a la galería de imágenes. Se utilizan funciones JavaScript para resaltar y quitar el resaltado de los enlaces del menú cuando el ratón pasa sobre ellos o sale de ellos, así como para cambiar la imagen principal en la galería de imágenes cuando se hace clic en una miniatura.
 
 
 
-
-![Imagen de WhatsApp 2024-02-25 a las 03 07 32_4c4de5d8](https://github.com/AlexRuales2/TALLER./assets/160562299/d3493990-f8f1-431b-8958-2e034ec58272)
