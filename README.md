@@ -517,11 +517,11 @@ function unhighlight(element) {
 - `element.style.fontWeight = 'normal';`: Restaura el estilo del texto del enlace a la normalidad cuando el ratón sale de él. Esto revierte el cambio de estilo realizado por la función highlight, devolviendo el texto del enlace a su grosor normal.
 
 # CONCLUSION
-* HTML: Define la estructura del menú de navegación utilizando listas no ordenadas (<ul>) y listas de elementos (<li>). Cada elemento de la lista contiene un enlace (<a>) que representa una opción de menú.
+- HTML: Define la estructura del menú de navegación utilizando listas no ordenadas (<ul>) y listas de elementos (<li>). Cada elemento de la lista contiene un enlace (<a>) que representa una opción de menú.
 
-* CSS: Establece los estilos visuales del menú de navegación y sus elementos. Se definen estilos para la disposición de los elementos, el color y el comportamiento de los enlaces, así como para la apariencia de las miniaturas en la galería de imágenes.
+- CSS: Establece los estilos visuales del menú de navegación y sus elementos. Se definen estilos para la disposición de los elementos, el color y el comportamiento de los enlaces, así como para la apariencia de las miniaturas en la galería de imágenes.
 
-* JavaScript: Proporciona interactividad al menú de navegación y a la galería de imágenes. Se utilizan funciones JavaScript para resaltar y quitar el resaltado de los enlaces del menú cuando el ratón pasa sobre ellos o sale de ellos, así como para cambiar la imagen principal en la galería de imágenes cuando se hace clic en una miniatura.
+- JavaScript: Proporciona interactividad al menú de navegación y a la galería de imágenes. Se utilizan funciones JavaScript para resaltar y quitar el resaltado de los enlaces del menú cuando el ratón pasa sobre ellos o sale de ellos, así como para cambiar la imagen principal en la galería de imágenes cuando se hace clic en una miniatura.
 
 
 
