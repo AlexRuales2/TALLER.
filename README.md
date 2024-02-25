@@ -376,3 +376,130 @@ function validateName(event) {
 - `opacity: 0.7;`: Reduce la opacidad de las miniaturas al 70% cuando el mouse está sobre ellas. Esto proporciona un efecto visual de atenuación y destaca la miniatura sobre la que se encuentra el mouse.
 
 ### Cuarto Archivo `ejercicio4.js`
+```
+var mainImage = document.getElementById("mainImage");
+var thumbnails = document.getElementById("thumbnails");
+
+thumbnails.addEventListener("click", function(event) {
+  if (event.target.classList.contains("thumbnail")) {
+    var newImageSrc = event.target.src;
+    mainImage.src = newImageSrc;
+  }
+});
+```
+- `var mainImage = document.getElementById("mainImage");`: Esto obtiene una referencia al elemento de la imagen principal en la galería de imágenes con el id "mainImage" y la guarda en la variable mainImage.
+
+- `var thumbnails = document.getElementById("thumbnails");`: Esto obtiene una referencia al contenedor de miniaturas en la galería de imágenes con el id "thumbnails" y la guarda en la variable thumbnails.
+
+- `thumbnails.addEventListener("click", function(event) { ... });`: Esto asigna un controlador de eventos de clic al contenedor de miniaturas. Cuando se hace clic en cualquier parte del contenedor de miniaturas, se ejecutará la función especificada.
+
+- `function(event) { ... }`: Define una función anónima que se ejecutará cuando se produzca el evento de clic. El parámetro event representa el evento de clic y contiene información sobre el evento, como el elemento que desencadenó el evento.
+
+- `if (event.target.classList.contains("thumbnail")) { ... }`: Dentro del controlador de eventos de clic, esta línea verifica si el elemento que desencadenó el evento de clic tiene la clase "thumbnail". En otras palabras, comprueba si el elemento clicado es una miniatura.
+
+- `event.target`: Accede al elemento que desencadenó el evento de clic.
+
+- `classList.contains("thumbnail")`: Comprueba si la lista de clases del elemento contiene la clase "thumbnail".
+
+- `var newImageSrc = event.target.src;`: Si el elemento clicado es una miniatura, esta línea obtiene la ruta de la imagen (src) de la miniatura clicada y la guarda en la variable newImageSrc.
+
+- `mainImage.src = newImageSrc;`: Actualiza la imagen principal (mainImage) con la nueva ruta de la imagen (newImageSrc). Esto cambia la imagen principal para que coincida con la miniatura clicada, mostrando la imagen en tamaño completo en la galería de imágenes.
+
+### Quinto Archivo `ejercicio5.html`
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú de Navegación Interactivo</title>
+<link rel="stylesheet" href="ejercicio5.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" onmouseover="highlight(this)" onmouseout="unhighlight(this)">Inicio</a></li>
+            <li><a href="#" onmouseover="highlight(this)" onmouseout="unhighlight(this)">Acerca de</a></li>
+            <li><a href="#" onmouseover="highlight(this)" onmouseout="unhighlight(this)">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <script src="ejercicio5.js"></script>
+</body>
+</html>
+```
+- `<head>`: Aquí se incluyen metadatos y enlaces a recursos externos como CSS y JavaScript.
+
+- `<meta charset="UTF-8">`: Define la codificación de caracteres del documento como UTF-8, que es ampliamente compatible con diferentes idiomas y caracteres especiales.
+
+- `<meta name="viewport" content="width=device-width, initial-scale=1.0">`: Define cómo el contenido debe ser renderizado en dispositivos móviles. En este caso, establece que el ancho del viewport debe ser igual al ancho del dispositivo y que la escala inicial es 1.0.
+
+- `<title>Menú de Navegación Interactivo</title>`: Establece el título de la página que se mostrará en la pestaña del navegador.
+
+- `<link rel="stylesheet" href="ejercicio5.css">`: Enlaza un archivo CSS externo llamado "ejercicio5.css" que contiene estilos para el menú de navegación.
+
+- `<body>`: Aquí se encuentra el contenido visible de la página.
+
+- `<nav>`: Define un elemento de navegación que contiene la lista de enlaces del menú.
+
+- `<ul>`: Define una lista no ordenada que contiene los elementos del menú.
+
+- `<li>`: Define cada elemento de la lista del menú.
+- `<a href="#" onmouseover="highlight(this)" onmouseout="unhighlight(this)">Inicio</a>`: Define un enlace (<a>) que representa un elemento del menú. Los atributos onmouseover y onmouseout se utilizan para llamar a las funciones JavaScript highlight y unhighlight cuando el ratón pasa sobre el enlace y sale de él, respectivamente. Estos eventos cambian el aspecto del enlace para resaltar o quitar el resaltado.
+
+- `<script src="ejercicio5.js"></script>`: Enlaza un archivo JavaScript externo llamado "ejercicio5.js" que contiene funciones para resaltar y quitar el resaltado de los enlaces del menú cuando el ratón pasa sobre ellos o sale de ellos.
+
+### Quinto Archivo `ejercicio5.css`
+```
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease; /* transición suave para el cambio de color */
+}
+
+nav ul li a:hover {
+    color: #ff5733; /* color destacado al pasar el ratón */
+}
+```
+- `nav ul`: Se aplica a la lista no ordenada (<ul>) dentro del elemento de navegación (<nav>).
+
+- `list-style-type: none;`: Elimina los estilos de viñetas predeterminados de la lista. Esto asegura que los elementos de la lista del menú no tengan viñetas.
+
+- `margin: 0;`: Elimina el margen exterior predeterminado de la lista. Esto elimina cualquier espacio en blanco alrededor de la lista.
+
+- `padding: 0;`: Elimina el relleno predeterminado de la lista. Esto elimina cualquier espacio en blanco dentro de la lista.
+
+- `nav ul li`: Se aplica a cada elemento de lista (<li>) dentro de la lista del menú.
+
+- `display: inline-block;`: Establece los elementos de la lista como bloques en línea, lo que significa que aparecerán uno al lado del otro en la misma línea horizontal.
+
+- `margin-right: 20px;`: Agrega un margen derecho de 20 píxeles a cada elemento de la lista. Esto crea espacio entre cada elemento del menú.
+
+- `nav ul li a`: Se aplica a cada enlace (<a>) dentro de los elementos de lista del menú.
+
+- `text-decoration: none;`: Elimina el subrayado predeterminado de los enlaces. Esto hace que los enlaces del menú no tengan subrayado.
+
+- `color: #333;`: Establece el color del texto de los enlaces del menú en un tono de gris (#333).
+
+- `transition: color 0.3s ease;`: Agrega una transición suave al cambio de color del texto de los enlaces. Cuando se cambia el color del texto (por ejemplo, al pasar el ratón sobre un enlace), la transición se llevará a cabo durante 0.3 segundos con un efecto de suavizado (ease).
+
+- `nav ul li a:hover`: Se aplica a los enlaces del menú cuando el ratón pasa sobre ellos.
+
+- `color: #ff5733;`: Cambia el color del texto de los enlaces al pasar el ratón sobre ellos a un tono de naranja (#ff5733). Esto proporciona un efecto de resaltado cuando el ratón está sobre un enlace del menú.
+
+
+
+
+
+![Imagen de WhatsApp 2024-02-25 a las 03 07 32_4c4de5d8](https://github.com/AlexRuales2/TALLER./assets/160562299/d3493990-f8f1-431b-8958-2e034ec58272)
