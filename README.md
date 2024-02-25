@@ -2,6 +2,10 @@ Trabajo de Programacion Orientada en Eventos
 
 Presentado Por: Breiner Santiago Romo Ruales-Jhon Alexander Ruales Bolaños
 
+Tecnologia en Desarrollo de Software    
+
+Grupo:A
+
 Presentado A: Ing. Nixon Anacona
 
 Instituto Tecnologico el Putumayo.
