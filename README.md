@@ -1,3 +1,11 @@
+Trabajo de Programacion Orientada en Eventos 
+
+Presentado Por: Breiner Santiago Romo Ruales-Jhon Alexander Ruales Bolaños
+
+Presentado A: Ing. Nixon Anacona
+
+Instituto Tecnologico el Putumayo.
+
 # TALLER DE EJERCICIOS
 Este taller práctico ofrece a los estudiantes la oportunidad de poner en práctica sus conocimientos sobre el manejo de eventos en JavaScript. A través de una serie de ejercicios, los participantes explorarán en detalle cómo utilizar addEventListener para capturar eventos específicos en el navegador. Además, se enfocarán en la manipulación del objeto event para acceder a información relevante sobre la interacción del usuario. Con un énfasis en comprender el modelo de eventos en el navegador, los estudiantes desarrollarán habilidades prácticas para crear interacciones dinámicas y receptivas en aplicaciones web.
 
